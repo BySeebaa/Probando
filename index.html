@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Formularios</title>
+</head>
+<body>
+     <header class="speaker-form-header"> 
+         <h1>Speaker Submission</h1>
+         <p>
+             <em>Want to speak at our fake conference</em>
+         </p>
+     </header>
+          
+     <!-- Action es donde agrego la ruta de mi archivo de PHP-->
+     <!-- method es como se envia la info del form-->
+         <form action="form.php" method="POST" class="speaker-form">
+            <div class="form-row">
+             <!-- form debe ser lo mismo que id-->
+                <label for="full-name">Name</label>
+                <input type="text" id="full-name" placeholder="EJ:Nombre" name="nombre" required> 
+            </div>
+            <div class="form-row">
+                  <label for="email">Email</label>
+                  <input type="emial" id="email" placeholder="Ej:Email"
+                  name="email" required>
+            </div>
+
+             <fieldset class="legacy-form-row">
+                 <legend>Type of talk</legend>
+                  <input type="radio" name="talk-type" id="talk-type-1">
+                  <label for="talk-type-1" class="radio-label">Main stage</label>
+
+                  <input type="radio" name="talk-type" id="talk-type-2" checked>
+                  <label for="talk-type-2" class="radio-label">Workshop</label>
+             </fieldset>
+
+             <div class="form-row">
+                 <label for="abstract">Textarea</label>
+                  <textarea name="textarea" id="abstract"></textarea>
+                  <p class="instructions">Describe your talk in 500 words or less</p>
+             </div>
+
+             <div class="form-row">
+                     <button type="Submit">submit</button>
+             </div>
+
+         </form>
+
+
+
+
+
+
+</body>
+</html>
